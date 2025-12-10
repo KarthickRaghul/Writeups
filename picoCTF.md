@@ -1,4 +1,4 @@
----
+
 
 SSTI - Server Side Template Injection
 
@@ -15,3 +15,5 @@ Apache Server has the following endpoints :
 `.htaccess`,`**.htpasswd**`**,**`**httpd.conf**`**,**`**.user.ini**`
 
 Mac have .DS_Store
+
+---
