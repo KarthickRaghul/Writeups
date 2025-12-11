@@ -115,3 +115,13 @@ Day 20:
 Click jacking (UI redressing) , Project research
 
 Day 21:
+
+picoCTF
+
+Day 22:
+
+AWS Storage module
+
+Day 23:
+
+Try hack me
