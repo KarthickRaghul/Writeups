@@ -9,3 +9,6 @@
 [[Module 5 - Networking]]
 
 [[Module 6- Storage]]
+
+[[Module 7 - Databases]]
+
