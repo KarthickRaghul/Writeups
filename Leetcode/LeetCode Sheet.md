@@ -4,6 +4,11 @@
 [[3804. Number of Centered Subarrays]]
 [[3805. Count Caesar Cipher Pairs]]
 ****
-# Day 2 - *12/01/2025*
+# Day 2 - *19/01/2025*
 
-[[853. Car Fleet]]
+[[283. Move Zeroes]]
+
+****
+# Day 3 - *20/01/2026*
+
+[[169. Majority Element]]
