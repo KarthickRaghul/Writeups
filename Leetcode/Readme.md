@@ -5,8 +5,8 @@ I am currently following this AlgoMaster-300 for practising my DSA and
 - [x] [283. Move Zeroes](283.%20Move%20Zeroes.md)
 - [x] [169. Majority Element](169.%20Majority%20Element.md)
 - [x] [[26. Remove Duplicates from Sorted Array]]
-- [ ] Best Time to Buy and Sell Stock
-- [ ] Rotate Array
+- [x] [[121. Best Time to Buy and Sell Stock]]
+- [x] [[189. Rotate Array]]
 - [ ] Product of Array Except Self
 - [ ] Best Time to Buy and Sell Stock II
 - [ ] Number of Zero-Filled Subarrays
