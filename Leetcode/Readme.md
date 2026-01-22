@@ -4,13 +4,13 @@ I am currently following this AlgoMaster-300 for practising my DSA and
 
 - [x] [283. Move Zeroes](283.%20Move%20Zeroes.md)
 - [x] [169. Majority Element](169.%20Majority%20Element.md)
-- [x] [[26. Remove Duplicates from Sorted Array]]
-- [x] [[121. Best Time to Buy and Sell Stock]]
-- [x] [[189. Rotate Array]]
-- [x] [[238. Product of Array Except Self]]
-- [x] [[121. Best Time to Buy and Sell Stock]]
-- [x] [[3804. Number of Centered Subarrays]]
-- [x] [[334. Increasing Triplet Subsequence]]
+- [x] [26. Remove Duplicates from Sorted Array](26.%20Remove%20Duplicates%20from%20Sorted%20Array.md)
+- [x] [121. Best Time to Buy and Sell Stock](121.%20Best%20Time%20to%20Buy%20and%20Sell%20Stock.md)
+- [x] [189. Rotate Array](189.%20Rotate%20Array.md)
+- [x] [238. Product of Array Except Self](238.%20Product%20of%20Array%20Except%20Self.md)
+- [x] [121. Best Time to Buy and Sell Stock](121.%20Best%20Time%20to%20Buy%20and%20Sell%20Stock.md)
+- [x] [3804. Number of Centered Subarrays](3804.%20Number%20of%20Centered%20Subarrays.md)
+- [x] [334. Increasing Triplet Subsequence](334.%20Increasing%20Triplet%20Subsequence.md)
 - [ ] First Missing Positive
 
 ---
