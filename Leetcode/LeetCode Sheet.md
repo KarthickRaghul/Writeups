@@ -36,3 +36,8 @@
 [14. Longest Common Prefix](14.%20Longest%20Common%20Prefix.md)  
 [151. Reverse Words in a String](151.%20Reverse%20Words%20in%20a%20String.md)  
 [41. First Missing Positive](41.%20First%20Missing%20Positive.md)  ``
+
+****
+# Day 7 - *24/01/2026*
+
+[6. Zigzag Conversion](6.%20Zigzag%20Conversion.md)
