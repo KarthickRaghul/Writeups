@@ -20,7 +20,7 @@ I am currently following this AlgoMaster-300 for practising my DSA and
 - [x] [392. Is Subsequence](392.%20Is%20Subsequence.md)
 - [x] [125. Valid Palindrome](125.%20Valid%20Palindrome.md)
 - [x] [14. Longest Common Prefix](14.%20Longest%20Common%20Prefix.md)
-- [X] [[6. Zigzag Conversion]]
+- [X] [6. Zigzag Conversion](6.%20Zigzag%20Conversion.md)
 - [x] [151. Reverse Words in a String](151.%20Reverse%20Words%20in%20a%20String.md)
 - [ ] Guess the Word
 

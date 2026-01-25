@@ -41,3 +41,9 @@
 # Day 7 - *24/01/2026*
 
 [6. Zigzag Conversion](6.%20Zigzag%20Conversion.md)
+
+****
+# Day 8 - *25/01/2026*
+
+[3818. Minimum Prefix Removal to Make Array Strictly Increasing](3818.%20Minimum%20Prefix%20Removal%20to%20Make%20Array%20Strictly%20Increasing.md)
+[3819. Rotate Non Negative Elements](3819.%20Rotate%20Non%20Negative%20Elements.md)
