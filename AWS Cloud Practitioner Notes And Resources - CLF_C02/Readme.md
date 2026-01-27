@@ -1,4 +1,4 @@
-# Struggling for AWS Cloud Practitioner Notes ? Dont know Where to find the practise resources ? Then you'll Find these repository helpful !
+# Struggling for AWS Cloud Practitioner Notes ? Dont know Where to find the practise resources ? Then you'll Find this repository helpful !
 
 *Good Luck with the AWS Cloud Practitioner Certification Exam!*
 
