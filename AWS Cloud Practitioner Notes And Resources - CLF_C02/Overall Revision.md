@@ -27,7 +27,7 @@
 |[AWS Batch(opens in a new tab)](https://aws.amazon.com/batch/)|AWS Batch is a fully managed service for efficiently running large-scale batch computing jobs on AWS.|
 |[What is Amazon Lightsail?(opens in a new tab)](https://docs.aws.amazon.com/lightsail/latest/userguide/what-is-amazon-lightsail.html)|Lightsail is a simplified cloud platform offering VPS, containers, and databases with predictable pricing.|
 |[What is AWS Outposts?(opens in a new tab)](https://docs.aws.amazon.com/outposts/latest/server-userguide/what-is-outposts.html)|AWS Outposts extends AWS infrastructure and services to on-premises locations for low-latency, local data processing.|
-|[[mo]]|The  <br>AWS Decision Guide for Modern Application Strategy helps organizations  <br>determine the most suitable development approach—serverless or  <br>Kubernetes—based on their operational model, team structure, and  <br>workload requirements.|
+|[mo](mo)|The  <br>AWS Decision Guide for Modern Application Strategy helps organizations  <br>determine the most suitable development approach—serverless or  <br>Kubernetes—based on their operational model, team structure, and  <br>workload requirements.|
 
 5.
 

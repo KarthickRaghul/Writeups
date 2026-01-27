@@ -1,4 +1,4 @@
-![[image.png]]
+![image](image.png)
 
 AWS Lambda - function as a service - Lambda is a serverless compute service that runs code in response to events without the need to provision or manage servers. You are charged only for the compute time consumed, down to the millisecond. Lambda handles execution, scaling, and resource allocation.
 

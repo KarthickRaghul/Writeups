@@ -1,4 +1,4 @@
-[[AI-ML]]
+[AI-ML](AI-ML.md)
 
 ---
 

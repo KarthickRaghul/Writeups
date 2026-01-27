@@ -1,1 +1,1 @@
-ExpressWay Lab - [[ExpressWay]]
+ExpressWay Lab - [ExpressWay](ExpressWay.md)

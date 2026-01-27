@@ -2,7 +2,7 @@
 
 *Good Luck with the AWS Cloud Practitioner Certification Exam!*
 
-![[IMG_20260127_102412.jpg]]
+![IMG_20260127_102412](IMG_20260127_102412.jpg)
 
 > **My Experience**:
 >   
@@ -11,20 +11,20 @@
 ---
 ## My Personal Notes :
 
-- [[Module 1 - Introduction to Cloud]]  
-- [[Module 2 - Computing in the cloud]]  
-- [[Module 3 - Exploring Compute Services]]  
-- [[Module 4 - Going Global]]  
-- [[Module 5 - Networking]]   
-- [[Module 6- Storage]]  
-- [[Module 7- Databases]]  
-- [[Module 8- AI-ML and Data Analytics]]  
-- [[Module 9- Security]]  
-- [[Module 10- Introduction to Monitoring, Compliance, and Governance]]  
-- [[Module 11- Pricing and Support]]  
-- [[Module 12- Migrating to the AWS Cloud]]  
-- [[Module 13- Well-Architected Solutions]]  
-- [[Overall Revision]]  
+- [Module 1 - Introduction to Cloud](Module%201%20-%20Introduction%20to%20Cloud.md)  
+- [Module 2 - Computing in the cloud](Module%202%20-%20Computing%20in%20the%20cloud.md)  
+- [Module 3 - Exploring Compute Services](Module%203%20-%20Exploring%20Compute%20Services.md)  
+- [Module 4 - Going Global](Module%204%20-%20Going%20Global.md)  
+- [Module 5 - Networking](Module%205%20-%20Networking.md)   
+- [Module 6- Storage](Module%206-%20Storage.md)  
+- [Module 7- Databases](Module%207-%20Databases.md)  
+- [Module 8- AI-ML and Data Analytics](Module%208-%20AI-ML%20and%20Data%20Analytics.md)  
+- [Module 9- Security](Module%209-%20Security.md)  
+- [Module 10- Introduction to Monitoring, Compliance, and Governance](Module%2010-%20Introduction%20to%20Monitoring,%20Compliance,%20and%20Governance.md)  
+- [Module 11- Pricing and Support](Module%2011-%20Pricing%20and%20Support.md)  
+- [Module 12- Migrating to the AWS Cloud](Module%2012-%20Migrating%20to%20the%20AWS%20Cloud.md)  
+- [Module 13- Well-Architected Solutions](Module%2013-%20Well-Architected%20Solutions.md)  
+- [Overall Revision](Overall%20Revision.md)  
 
   ---
   
