@@ -35,7 +35,7 @@ The response showed a basic HTML page titled Thunder Portal, indicating this was
 Saving and viewing the full HTML revealed the following hidden comment:
 
 <!-- FLAG PART 1 -->
-![[Writeups/Ctfs/DigitalCyberHunt/Resources/image.png|Initial Viewing]]
+![Initial Viewing](Writeups/Ctfs/DigitalCyberHunt/Resources/image.png)
 <!-- ThunderCipher{source_code_ -->
 
 
@@ -45,7 +45,7 @@ This confirmed that the flag was split into multiple parts, and only the first p
 
 The HTML referenced an external CSS file:
 
-![[image-2.png|style.css]]
+![style.css](image-2.png)
 
 <link rel="stylesheet" href="style.css">
 
@@ -60,7 +60,7 @@ This comment clearly contained the second part of the flag.
 
 📜 Inspecting the JavaScript File
 
-![[image-1.png|app.js]]
+![app.js](image-1.png)
 
 The HTML also referenced an external JavaScript file:
 

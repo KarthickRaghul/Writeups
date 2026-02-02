@@ -53,7 +53,7 @@ The challenge name and simplicity suggest that the flag might be placed in the m
 
 - `#general`
 
-![[Screenshot_20260202_143314.png|Flag Found in Discord]]
+![Flag Found in Discord](Screenshot_20260202_143314.png)
 
 ---
 

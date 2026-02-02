@@ -22,7 +22,7 @@ No flag was directly visible in the page or headers.
 
 Viewing the page source (View Source) revealed an interesting HTML comment:
 
-![[Writeups/Ctfs/DigitalCyberHunt/Resources/image.png|Page Source View]]
+![Page Source View](Writeups/Ctfs/DigitalCyberHunt/Resources/image.png)
 
 <!-- Nothing interesting here. Bots read rules, humans read pages. -->
 
@@ -41,7 +41,7 @@ Navigating to:
 
 http://text.thundercipher.tech/robots.txt
 
-![[image-1.png|Robots.txt]]
+![Robots.txt](image-1.png)
 
 
 Revealed the following content:
@@ -90,7 +90,7 @@ http://text.thundercipher.tech/txt-of-thunder/
 
 Returned an HTML page instead of a directory error.
 
-![[image-2.png|Final Attempt]]
+![Final Attempt](image-2.png)
 
 ## Inspecting the Hidden Page
 
