@@ -3,13 +3,14 @@
 **Category:** Forensics / Audio  
 **Goal:** Recover the hidden flag
 
-To Download the question file : https://raw.githubusercontent.com/KarthickRaghul/Writeups/main/Ctfs/Challenge.zip
+To Download the question file : https://raw.githubusercontent.com/KarthickRaghul/Writeups/main/Ctfs/good-advice.zip
 
 There was a Audio File named Unknown with no extension and not a proper audio file that couldn't be opened with any application .
 - The output showed `RIFF` / `WAVE` strings
 - This indicated the file was **meant to be a WAV audio file**
 
 So I renamed the file into audio.wav and then tried opening  
+
 ![Pasted image 20260202132921](Pasted%20image%2020260202132921.png)  
 
 
@@ -98,6 +99,7 @@ Now there will be three files created :
 ### Finding the Flag:
 
 Now opened the rebuilt.wav in Audacity and slow the audio and listen to it :
+
 ![Pasted image 20260202134830](Pasted%20image%2020260202134830.png)
 
 We can find it saying a1w4ysth3r34u
