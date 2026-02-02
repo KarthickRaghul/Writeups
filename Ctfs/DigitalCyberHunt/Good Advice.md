@@ -10,9 +10,11 @@ There was a Audio File named Unknown with no extension and not a proper audio fi
 - This indicated the file was **meant to be a WAV audio file**
 
 So I renamed the file into audio.wav and then tried opening
-![Pasted image 20260202132921](Pasted%20image%2020260202132921.png)
+![Pasted image 20260202132921](Pasted%20image%2020260202132921.png)  
+
 
 After that I tried converting it to spectrogram , then 
+
 ```bash
 > sox audio.wav -n spectrogram
 
