@@ -38,7 +38,7 @@ AWS Cloud → Region → Amazon VPC →Availablity Zones → Subnet
 
 ---
 
-![image 1](image%201.png)
+![image 1](Writeups/AWS%20Cloud%20Practitioner%20Notes%20And%20Resources%20-%20CLF_C02/image%201.png)
 
 Network ACL - Statefull
 

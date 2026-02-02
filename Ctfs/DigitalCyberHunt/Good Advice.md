@@ -3,7 +3,7 @@
 **Category:** Forensics / Audio  
 **Goal:** Recover the hidden flag
 
-To Download the question file : https://raw.githubusercontent.com/KarthickRaghul/Writeups/main/Ctfs/good-advice.zip
+To Download the question file : https://raw.githubusercontent.com/KarthickRaghul/Writeups/main/Ctfs/DigitalCyberHunt/Resources/good-advice.zip
 
 There was a Audio File named Unknown with no extension and not a proper audio file that couldn't be opened with any application .
 - The output showed `RIFF` / `WAVE` strings

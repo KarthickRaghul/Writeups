@@ -1,6 +1,6 @@
 
- **Challenge**: TXT OF THUNDER
-**Category**: Web
+ **Challenge**: TXT OF THUNDER  
+**Category**: Web  
 **Goal**: Find the hidden flag
 
 ## Initial Reconnaissance
@@ -22,7 +22,7 @@ No flag was directly visible in the page or headers.
 
 Viewing the page source (View Source) revealed an interesting HTML comment:
 
-![Page Source View](image.png)
+![[Writeups/Ctfs/DigitalCyberHunt/Resources/image.png|Page Source View]]
 
 <!-- Nothing interesting here. Bots read rules, humans read pages. -->
 
@@ -41,7 +41,7 @@ Navigating to:
 
 http://text.thundercipher.tech/robots.txt
 
-![Robots.txt](image-1.png)
+![[image-1.png|Robots.txt]]
 
 
 Revealed the following content:
@@ -90,7 +90,7 @@ http://text.thundercipher.tech/txt-of-thunder/
 
 Returned an HTML page instead of a directory error.
 
-![Final Attempt](image-2.png)
+![[image-2.png|Final Attempt]]
 
 ## Inspecting the Hidden Page
 

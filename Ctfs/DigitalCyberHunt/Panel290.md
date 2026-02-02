@@ -11,7 +11,7 @@
 
 A mysterious PCB design file archive was provided containing multiple Gerber layers. The challenge required extracting and analyzing these hardware design files to find the hidden flag.
 
-To Download the the question file :  https://raw.githubusercontent.com/KarthickRaghul/Writeups/main/Ctfs/panel290.zip]
+To Download the the question file :  https://raw.githubusercontent.com/KarthickRaghul/Writeups/main/Ctfs/DigitalCyberHunt/Resources/panel290.zip
 
 ---
 

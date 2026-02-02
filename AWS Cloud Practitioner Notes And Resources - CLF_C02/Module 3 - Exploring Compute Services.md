@@ -1,4 +1,4 @@
-![image](image.png)
+![image](Writeups/AWS%20Cloud%20Practitioner%20Notes%20And%20Resources%20-%20CLF_C02/image.png)
 
 AWS Lambda - function as a service - Lambda is a serverless compute service that runs code in response to events without the need to provision or manage servers. You are charged only for the compute time consumed, down to the millisecond. Lambda handles execution, scaling, and resource allocation.
 
