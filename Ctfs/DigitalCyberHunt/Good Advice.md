@@ -1,4 +1,4 @@
-# Challenge: _Good Advice_
+# Challenge: Good Advice
 
 **Category:** Forensics / Audio  
 **Goal:** Recover the hidden flag
@@ -25,7 +25,7 @@ After Hex Analysis
 ❯ xxd -g1 -l 64 audio.wav
 
 00000000: 11 49 46 46 46 d0 02 00 57 41 56 45 66 6d 74 20  .IFFF...WAVEfmt 
-00000010: 10 00 00 00 01 00 01 00 22 56 00 00 44 ac 00 00  ........"V..D...
+00000010: 10 00 00 00 01 00 01 00 22 56 00 00 44 ac 00 00  ........V..D...
 00000020: 02 00 10 00 4c 49 53 54 1a 00 00 00 49 4e 46 4f  ....LIST....INFO
 00000030: 49 53 46 54 0d 00 00 00 4c 61 76 66 36 31 2e 31  ISFT....Lavf61.1
 ```
