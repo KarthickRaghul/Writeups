@@ -1,5 +1,5 @@
 
-I am currently following this AlgoMaster-300 for practising my DSA and 
+I followed this AlgoMaster-300 for practising my DSA 
 ## Arrays
 
 - [x] [283. Move Zeroes](283.%20Move%20Zeroes.md)
@@ -26,70 +26,7 @@ I am currently following this AlgoMaster-300 for practising my DSA and
 
 ---
 
-## Bit Manipulation
-- [ ] Single Number
-- [ ] Number of 1 Bits
-- [ ] Counting Bits
-- [ ] Reverse Bits
-- [ ] Bitwise AND of Numbers Range
-- [ ] Single Number III
-- [ ] Sum of Two Integers
+## Neetcode 150 : 
 
----
-
-## Hash Tables
-- [ ] Design HashMap
-- [ ] Maximum Number of Balloons
-- [ ] Number of Good Pairs
-- [ ] Isomorphic Strings
-- [ ] Ransom Note
-- [ ] Contains Duplicate II
-- [ ] Group Anagrams
-- [ ] Encode and Decode TinyURL
-- [ ] Reorganize String
-- [ ] Longest Consecutive Sequence
-- [ ] Split Array into Consecutive Subsequences
-- [ ] Number of Matching Subsequences
-- [ ] Number of Good Ways to Split a String
-
----
-
-## Two Pointers
-- [ ] Merge Sorted Array
-- [ ] Two Sum II - Input Array Is Sorted
-- [ ] Container With Most Water
-- [ ] 3Sum
-- [ ] Trapping Rain Water
-
----
-
-## Prefix Sum
-- [ ] Range Sum Query - Immutable
-- [ ] Subarray Sum Equals K
-- [ ] Subarray Sums Divisible by K
-- [ ] Continuous Subarray Sum
-- [ ] Contiguous Array
-
----
-
-## Sliding Window (Fixed)
-- [ ] Maximum Average Subarray I
-- [ ] Find All Anagrams in a String
-- [ ] Permutation in String
-- [ ] Maximum Sum of Distinct Subarrays With Length K
-- [ ] Substring with Concatenation of All Words
-
----
-
-## Sliding Window (Dynamic)
-- [ ] Longest Substring Without Repeating Characters
-- [ ] Longest Repeating Character Replacement
-- [ ] Minimum Size Subarray Sum
-- [ ] Max Consecutive Ones III
-- [ ] Minimum Window Substring
-
----
-
-## Kadane’s Algorithm
-- [ ] Maximum Subarray
-- [ ]
+**Sliding Window**
+- [x]  [424. Longest Repeating Character Replacement](424.%20Longest%20Repeating%20Character%20Replacement.md)

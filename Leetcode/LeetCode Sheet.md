@@ -52,3 +52,8 @@
 # Day 9 - *28/01/2026*
 
 [136. Single Number](136.%20Single%20Number.md)
+
+****
+# Day 10 - *02/02/2026*
+
+[424. Longest Repeating Character Replacement](424.%20Longest%20Repeating%20Character%20Replacement.md)
