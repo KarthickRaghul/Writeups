@@ -12,4 +12,4 @@ Funtion overview -  [Funtion Of Java to be remembered](Leetcode/Funtion%20Of%20J
 
 My AWS Cloud Practioner Notes -[Readme](AWS%20Cloud%20Practitioner%20Notes%20And%20Resources%20-%20CLF_C02/Readme.md)  
 
-Active Directory WriteUps - [[ActiveDirectory/Readme|Readme]]
+Active Directory WriteUps - [Readme](Writeups/ActiveDirectory/Readme.md)
