@@ -9,7 +9,7 @@ There was a Audio File named Unknown with no extension and not a proper audio fi
 - The output showed `RIFF` / `WAVE` strings
 - This indicated the file was **meant to be a WAV audio file**
 
-So I renamed the file into audio.wav and then tried opening
+So I renamed the file into audio.wav and then tried opening  
 ![Pasted image 20260202132921](Pasted%20image%2020260202132921.png)  
 
 
