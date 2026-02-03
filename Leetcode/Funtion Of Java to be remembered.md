@@ -9,3 +9,4 @@
 ## Array
 
 - `System.out.println(Arrays.deepToString(arr))`  -> to print 2d arrays  
+- `int r = Arrays.stream(piles).max().getAsInt();`
