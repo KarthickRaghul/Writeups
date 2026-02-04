@@ -63,3 +63,8 @@
 
 [[853. Car Fleet]]
 [875. Koko Eating Bananas](875.%20Koko%20Eating%20Bananas.md)
+
+****
+# Day 12 - *04/02/2026*
+
+[110. Balanced Binary Tree](110.%20Balanced%20Binary%20Tree.md)

@@ -30,3 +30,14 @@ I followed this AlgoMaster-300 for practising my DSA
 
 **Sliding Window**
 - [x]  [424. Longest Repeating Character Replacement](424.%20Longest%20Repeating%20Character%20Replacement.md)
+
+**Binary Search **
+- [x] [[424. Longest Repeating Character Replacement]]
+
+**Stack**
+- [x] [[853. Car Fleet]]
+
+**Tree**
+- [x] [[744. Find Smallest Letter Greater Than Target]]    
+- [x] [[1448. Count Good Nodes in Binary Tree]]  
+- [x] [[110. Balanced Binary Tree]] 
