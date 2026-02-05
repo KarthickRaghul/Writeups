@@ -32,12 +32,12 @@ I followed this AlgoMaster-300 for practising my DSA
 - [x]  [424. Longest Repeating Character Replacement](424.%20Longest%20Repeating%20Character%20Replacement.md)
 
 **Binary Search **
-- [x] [[424. Longest Repeating Character Replacement]]
+- [x] [424. Longest Repeating Character Replacement](424.%20Longest%20Repeating%20Character%20Replacement.md)
 
 **Stack**
-- [x] [[853. Car Fleet]]
+- [x] [853. Car Fleet](853.%20Car%20Fleet.md)
 
 **Tree**
-- [x] [[744. Find Smallest Letter Greater Than Target]]    
-- [x] [[1448. Count Good Nodes in Binary Tree]]  
-- [x] [[110. Balanced Binary Tree]] 
+- [x] [744. Find Smallest Letter Greater Than Target](744.%20Find%20Smallest%20Letter%20Greater%20Than%20Target.md)    
+- [x] [1448. Count Good Nodes in Binary Tree](1448.%20Count%20Good%20Nodes%20in%20Binary%20Tree.md)  
+- [x] [110. Balanced Binary Tree](110.%20Balanced%20Binary%20Tree.md) 
