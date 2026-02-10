@@ -73,3 +73,8 @@
 # Day 13 - *05/02/2026*
 
 [3379. Transformed Array](3379.%20Transformed%20Array.md)
+
+****
+# Day 14 - *10/02/2026*
+
+[3719. Longest Balanced Subarray I](3719.%20Longest%20Balanced%20Subarray%20I.md)
