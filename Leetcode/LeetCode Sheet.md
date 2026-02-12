@@ -78,3 +78,9 @@
 # Day 14 - *10/02/2026*
 
 [3719. Longest Balanced Subarray I](3719.%20Longest%20Balanced%20Subarray%20I.md)
+
+****
+# Day 15 - *12/02/2026*
+
+[703. Kth Largest Element in a Stream](703.%20Kth%20Largest%20Element%20in%20a%20Stream.md)
+[1046. Last Stone Weight](1046.%20Last%20Stone%20Weight.md)
