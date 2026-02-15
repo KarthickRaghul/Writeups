@@ -84,3 +84,14 @@
 
 [703. Kth Largest Element in a Stream](703.%20Kth%20Largest%20Element%20in%20a%20Stream.md)
 [1046. Last Stone Weight](1046.%20Last%20Stone%20Weight.md)
+[973. K Closest Points to Origin](973.%20K%20Closest%20Points%20to%20Origin.md)
+
+****
+# Day 16 - *13/02/2026*
+
+[621. Task Scheduler](621.%20Task%20Scheduler.md)
+
+****
+# Day 17 - *14/02/2026*
+
+[355. Design Twitter](355.%20Design%20Twitter.md)
