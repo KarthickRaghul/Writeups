@@ -16,4 +16,6 @@
 
 ### Priority Queue
 
-- 
+
+### General
+- `Integer.bitCount()` - to find the number of ones in the binary value of that integer
