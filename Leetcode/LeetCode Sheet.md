@@ -101,4 +101,14 @@
 
 [692. Top K Frequent Words](692.%20Top%20K%20Frequent%20Words.md)  
 [190. Reverse Bits](190.%20Reverse%20Bits.md)  
-[3664. Two-Letter Card Game](3664.%20Two-Letter%20Card%20Game.md)  
+[3664. Two-Letter Card Game](3664.%20Two-Letter%20Card%20Game.md)
+
+****
+# Day 19 - *18/02/2026*
+
+[200. Number of Islands](200.%20Number%20of%20Islands.md)  
+[133. Clone Graph](133.%20Clone%20Graph.md)  
+[207. Course Schedule](207.%20Course%20Schedule.md)  
+[210. Course Schedule II](210.%20Course%20Schedule%20II.md)
+
+I learned Graph traversals , Deep/Shallow Copy , Cycle detection
