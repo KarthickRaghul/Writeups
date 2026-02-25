@@ -117,3 +117,8 @@ I learned Graph traversals , Deep/Shallow Copy , Cycle detection
 # Day 20 - *19/02/2026*
 
 [417. Pacific Atlantic Water Flow](417.%20Pacific%20Atlantic%20Water%20Flow.md)
+
+****
+# Day 21 - *25/02/2026*
+
+[1356. Sort Integers by The Number of 1 Bits](1356.%20Sort%20Integers%20by%20The%20Number%20of%201%20Bits.md)

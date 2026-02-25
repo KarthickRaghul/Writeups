@@ -17,5 +17,12 @@
 ### Priority Queue
 
 
+
+### HashMap
+
+- ` map.computeIfAbsent(key, k -> new ArrayList<>()).add(frequency);` 
+
 ### General
 - `Integer.bitCount()` - to find the number of ones in the binary value of that integer
+- `Integer.numberOfLeadingZeros(int i)`:  Returns the number of zero bits preceding the highest-order ("leftmost") one-bit.  
+- `Integer.numberOfTrailingZeros(int i)`:  Returns the number of zero bits following the lowest-order ("rightmost") one-bit  
