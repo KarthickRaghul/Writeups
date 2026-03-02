@@ -122,3 +122,8 @@ I learned Graph traversals , Deep/Shallow Copy , Cycle detection
 # Day 21 - *25/02/2026*
 
 [1356. Sort Integers by The Number of 1 Bits](1356.%20Sort%20Integers%20by%20The%20Number%20of%201%20Bits.md)
+
+****
+# Day 22 - *02/03/2026*
+
+[430. Flatten a Multilevel Doubly Linked List](430.%20Flatten%20a%20Multilevel%20Doubly%20Linked%20List.md)
