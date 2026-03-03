@@ -14,13 +14,17 @@
 - `int r = Arrays.stream(piles).max().getAsInt();`
 - `Arrays.sort(matrix, (a, b) -> Integer.compare(a[0], b[0]))`
 
-### Priority Queue
-
-
-
 ### HashMap
 
 - ` map.computeIfAbsent(key, k -> new ArrayList<>()).add(frequency);` 
+
+### Set
+ 
+ - `set1.retainAll(set2);`  - Intesection
+ - `set1.addAll(set2)`     - union
+ - `set1.removeAll(set2)`  - difference 
+ - `set1.containsAll(set2)` - check subset
+
 
 ### General
 - `Integer.bitCount()` - to find the number of ones in the binary value of that integer
