@@ -127,3 +127,8 @@ I learned Graph traversals , Deep/Shallow Copy , Cycle detection
 # Day 22 - *02/03/2026*
 
 [430. Flatten a Multilevel Doubly Linked List](430.%20Flatten%20a%20Multilevel%20Doubly%20Linked%20List.md)
+
+****
+# Day 23 - *30/03/2026*
+
+[Manacher's Algorithm](Manacher's%20Algorithm.md)
