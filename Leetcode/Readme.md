@@ -1,5 +1,5 @@
 
-I followed this AlgoMaster-300 for practising my DSA 
+I followed Strivers , Neetcode and Algo360
 ## Arrays
 
 - [x] [283. Move Zeroes](283.%20Move%20Zeroes.md)

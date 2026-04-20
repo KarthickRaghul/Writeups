@@ -132,3 +132,11 @@ I learned Graph traversals , Deep/Shallow Copy , Cycle detection
 # Day 23 - *30/03/2026*
 
 [Manacher's Algorithm](Manacher's%20Algorithm.md)
+
+
+## Inbetween I did'nt update the sheet
+
+****
+# Day 24 - *20/04/2026*
+
+[53. Maximum Subarray](53.%20Maximum%20Subarray.md)
