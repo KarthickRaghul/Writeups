@@ -31,4 +31,6 @@ public int[] manacher(String s) {
 
     return P;
 }
+
+
 ```
