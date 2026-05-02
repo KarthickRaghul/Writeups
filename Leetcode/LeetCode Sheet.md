@@ -140,3 +140,8 @@ I learned Graph traversals , Deep/Shallow Copy , Cycle detection
 # Day 24 - *20/04/2026*
 
 [53. Maximum Subarray](53.%20Maximum%20Subarray.md)
+
+****
+# Day 25 - *02/05/2026*
+
+[788. Rotated Digits](788.%20Rotated%20Digits.md)
