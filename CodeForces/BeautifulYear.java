@@ -22,4 +22,5 @@ public class BeautifulYear {
         }
         System.out.println(year);
     }
+    
 }
