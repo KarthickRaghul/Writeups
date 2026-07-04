@@ -17,6 +17,7 @@
 ### HashMap
 
 - ` map.computeIfAbsent(key, k -> new ArrayList<>()).add(frequency);` 
+- `map.merge(idx,1,Integer::sum)` -> freq counting
 
 ### Set
  
