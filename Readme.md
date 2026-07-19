@@ -1,7 +1,7 @@
 This is my own maintenance of Write-ups .
 
 >[!NOTE]
->I just created this repository for the maintenance of my writeups so that   I can document my entire learning journey.
+>I just created this repository for the maintenance of my writeups so that  I can document my entire learning journey.
 
 My HackTheBox Writeups  -  [Readme](HackTheBox/Readme.md)  
 
