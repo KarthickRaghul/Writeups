@@ -9,4 +9,6 @@ Perfect Rectangle -> 391
 Rectangle Area II -> 850  
 Number of Flowers in Full Bloom -> 2251
 [Two Best Non-Overlapping Events](https://leetcode.com/problems/two-best-non-overlapping-events/description/ "View on LeetCode")
- 
+path sum 3
+[105. Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
+[106. Construct Binary Tree from Inorder and Postorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/)
