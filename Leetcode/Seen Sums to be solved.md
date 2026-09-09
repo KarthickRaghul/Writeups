@@ -15,11 +15,12 @@ This problem is based on line sweep algorithm if you feel difficult go through t
 - [ ] [Two Best Non-Overlapping Events](https://leetcode.com/problems/two-best-non-overlapping-events/description/ "View on LeetCode")
 - [ ] [105. Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
 - [ ] [106. Construct Binary Tree from Inorder and Postorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/)
+- [ ] 1786
 
 DSU : 
 - [x]  **827. Making A Large Island** ⭐
 - [ ] **305. Number of Islands II** ⭐
-- [ ] **1584. Min Cost to Connect All Points** ⭐
+- [x] **1584. Min Cost to Connect All Points** ⭐
 - [ ] **1202. Smallest String With Swaps**
 - [ ] **1061. Lexicographically Smallest Equivalent String**
 - [ ] **1697. Checking Existence of Edge Length Limited Paths**
@@ -34,7 +35,7 @@ Trie :
 - [ ] **1804. Implement Trie II (Prefix Tree)** 
 - [x] **648. Replace Words** 
 - [x] **211. Design Add and Search Words Data Structure** 
-- [ ] **720. Longest Word in Dictionary** 
+- [x] **720. Longest Word in Dictionary** 
 - [ ] **820. Short Encoding of Words** 
 - [ ] **677. Map Sum Pairs** 
 - [ ] **1268. Search Suggestions System** 
@@ -45,3 +46,4 @@ Trie :
 - [ ] **1032. Stream of Characters** 
 - [ ] **472. Concatenated Words** 
 - [ ] **336. Palindrome Pairs** 
+
