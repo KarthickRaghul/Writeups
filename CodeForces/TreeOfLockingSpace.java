@@ -86,6 +86,7 @@ class LockingTree {
         while(temp != null) {
             temp.lockedDecendants.add(curr.val);
             temp = map.get(temp.parent);
+            
         }
 
         return true;
