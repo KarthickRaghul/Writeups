@@ -33,135 +33,143 @@
 import java.util.*;
 
 class Node {
-    int parent;
-    int val;
-    List<Node> decendant = new ArrayList<>();
+    String name;
+    Node parent;
     boolean isLocked = false;
     int lockedBy = -1;
-    Set<Integer> lockedDecendants = new HashSet<>();
+    // Storing descendants as Node references makes bulk unlocking highly efficient
+    Set<Node> lockedDescendants = new HashSet<>();
 
-    Node (int val, int parent) {
-        this.val = val;
-        this.parent = parent;
+    Node(String name) {
+        this.name = name;
     }
 }
 
 class LockingTree {
+    Map<String, Node> map = new HashMap<>();
 
-    Node tree;
-    Map<Integer, Node> map = new HashMap<>();
-
-    public LockingTree(int[] parent) {
-
-        for(int i = 0 ; i < parent.length ; i++)
-            map.put(i,new Node(i,parent[i]));
-
-        tree = new Node(0, parent[0]);
-        map.put(0, tree);
-
-        for (int i = 1; i < parent.length; i++) {
-
-            Node curr = map.get(i);
-            Node p = map.get(parent[i]);
-            p.decendant.add(curr);
-
+    public LockingTree(String[] nodes, int m) {
+        Node[] nodeArr = new Node[nodes.length];
+        
+        // 1. Initialize all nodes and populate the map
+        for (int i = 0; i < nodes.length; i++) {
+            nodeArr[i] = new Node(nodes[i]);
+            map.put(nodes[i], nodeArr[i]);
+        }
+        
+        // 2. Build the Generic M-ary Tree relationships
+        for (int i = 1; i < nodes.length; i++) {
+            int parentIndex = (i - 1) / m;
+            nodeArr[i].parent = nodeArr[parentIndex];
         }
     }
 
-    public boolean lock(int num, int user) {
-        
-
-//     Once Lock(X, uid) succeeds, then lock(A, any user) should fail, where A is a descendant of X.
-//     Lock(B. any user) should fail where X is a descendant of B.
-//     Lock operation cannot be performed on a node that is already locked.
-
-        Node curr = map.get(num);
-        if (curr.isLocked || !curr.lockedDecendants.isEmpty() || hasLockedAncestor(curr))
+    public boolean lock(String name, int user) {
+        Node curr = map.get(name);
+        if (curr == null || curr.isLocked || !curr.lockedDescendants.isEmpty() || hasLockedAncestor(curr)) {
             return false;
+        }
 
         curr.isLocked = true;
         curr.lockedBy = user;
 
-        Node temp = map.get(curr.parent);
-        while(temp != null) {
-            temp.lockedDecendants.add(curr.val);
-            temp = map.get(temp.parent);
-            
+        // Propagate the locked status to all ancestors
+        Node temp = curr.parent;
+        while (temp != null) {
+            temp.lockedDescendants.add(curr);
+            temp = temp.parent;
         }
 
         return true;
     }
 
-    public boolean unlock(int num, int user) {
-
-//     The unlock reverts what was done by the Lock operation.
-//     It can only be called on same and unlocked by same uid.
-
-        Node curr = map.get(num);
-        if (!curr.isLocked || curr.lockedBy != user)
+    public boolean unlock(String name, int user) {
+        Node curr = map.get(name);
+        if (curr == null || !curr.isLocked || curr.lockedBy != user) {
             return false;
+        }
 
         curr.isLocked = false;
         curr.lockedBy = -1;
 
-        Node temp = map.get(curr.parent);
-        while(temp != null) {
-            temp.lockedDecendants.remove(curr.val);
-            temp = map.get(temp.parent);
+        // Remove this node from all ancestors' locked descendants sets
+        Node temp = curr.parent;
+        while (temp != null) {
+            temp.lockedDescendants.remove(curr);
+            temp = temp.parent;
         }
 
         return true;
     }
 
-    public boolean upgrade(int num, int user) {
-
-//     It is only possible if any ancestor node is only locked by the same user uid.
-//     The Upgrade should fail if there is any node that is locked by some other uid Y below.
+    public boolean upgrade(String name, int user) {
+        Node curr = map.get(name);
         
-        Node curr = map.get(num);
-        
-        if(curr.isLocked)
+        if (curr == null || curr.isLocked || curr.lockedDescendants.isEmpty() || hasLockedAncestor(curr)) {
             return false;
+        }
 
-        //Check decendants for lock
-        boolean oneLockedDes = curr.lockedDecendants.size() == 0;
-
-        //Check parent
-        boolean noParentLock = hasLockedAncestor(curr);
-
-        if(oneLockedDes || noParentLock)
-            return false;
-        
-        for (int nodeVal : curr.lockedDecendants) {
-            Node node = map.get(nodeVal);
-
-            if (node.lockedBy != user)
+        // Verify ALL locked descendants are locked by the SAME user
+        for (Node descendant : curr.lockedDescendants) {
+            if (descendant.lockedBy != user) {
                 return false;
+            }
         }
 
-        //Unlock All decendants 
-        List<Integer> lockedNodes =
-                new ArrayList<>(curr.lockedDecendants);
-
-        for (int nodeVal : lockedNodes) {
-            unlock(nodeVal, user);
+        // Create a copy to avoid ConcurrentModificationException during iteration
+        List<Node> lockedNodes = new ArrayList<>(curr.lockedDescendants);
+        
+        // Unlock all descendants (this automatically removes them from ancestors' sets)
+        for (Node descendant : lockedNodes) {
+            unlock(descendant.name, user);
         }
 
-        return lock(num, user);
-
+        // Finally, lock the current node
+        return lock(name, user);
     }
 
     private boolean hasLockedAncestor(Node curr) {
-
-        Node parent = map.get(curr.parent);
+        Node parent = curr.parent;
         while (parent != null) {
-
-            if (parent.isLocked)
+            if (parent.isLocked) {
                 return true;
-
-            parent = map.get(parent.parent);
+            }
+            parent = parent.parent;
         }
-
         return false;
+    }
+}
+
+class TreeOfLockingSpace {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt(), m = sc.nextInt();
+        sc.nextLine();
+        String[] nodes = new String[n];
+        for(int i=0;i<n;i++) 
+            nodes[i] = sc.nextLine();
+        
+        LockingTree lt = new LockingTree(nodes, m);
+
+        int tc = sc.nextInt();
+        while(tc-->0) {
+            int op = sc.nextInt();
+            String str = sc.next();
+            int val = sc.nextInt();
+
+            switch (op) {
+                case 1 :
+                    System.out.println(lt.lock(str,val));
+                    break;
+                case 2 :
+                    System.out.println(lt.unlock(str, val));
+                    break;
+                case 3 :
+                    System.out.println(lt.upgrade(str, val));
+                    break;
+            }
+        }
+        
+        sc.close();
     }
 }
