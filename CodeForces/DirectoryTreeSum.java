@@ -1,45 +1,50 @@
+import java.io.*;
 import java.util.*;
 
 class Node {
     String name;
-    String path;
     Node parent;
-    ArrayList<Node> children;
+    // Using a HashMap for children gives O(1) child lookups when traversing paths
+    HashMap<String, Node> children;
     int descendants;
 
-    Node(String name, String path) {
+    Node(String name) {
         this.name = name;
-        this.path = path;
-        this.children = new ArrayList<>();
+        this.children = new HashMap<>();
         this.descendants = 0;
     }
 }
 
 class DirectoryTree {
-    HashMap<String, Node> map;
     Node root;
 
     DirectoryTree(String rootName) {
-        map = new HashMap<>();
-        root = new Node(rootName, rootName);
-        map.put(rootName, root);
+        root = new Node(rootName);
     }
 
+    // O(depth) lookup instead of O(1) global hashmap.
+    // This allows cutPaste to be O(1) for the subtree, preventing TLE.
     Node getNode(String path) {
-        return map.get(path);
+        String[] parts = path.split("/");
+        if (!parts[0].equals(root.name)) return null;
+        
+        Node curr = root;
+        for (int i = 1; i < parts.length; i++) {
+            curr = curr.children.get(parts[i]);
+            if (curr == null) return null; // Path doesn't exist
+        }
+        return curr;
     }
 
     void add(String parentPath, String name) {
         Node parent = getNode(parentPath);
         if (parent == null) return;
 
-        String path = parentPath + "/" + name;
-        Node child = new Node(name, path);
+        Node child = new Node(name);
         child.parent = parent;
-        parent.children.add(child);
-        map.put(path, child);
+        parent.children.put(name, child);
 
-        // Update descendant counts for all ancestors
+        // Update descendant counts for all ancestors O(height)
         Node curr = parent;
         while (curr != null) {
             curr.descendants++;
@@ -52,7 +57,6 @@ class DirectoryTree {
         return node == null ? -1 : node.descendants;
     }
 
-    // Checks if 'dest' is a descendant of 'src' (or the same node)
     boolean isInside(Node dest, Node src) {
         Node curr = dest;
         while (curr != null) {
@@ -66,14 +70,14 @@ class DirectoryTree {
         Node src = getNode(srcPath);
         Node dest = getNode(destPath);
 
-        // Edge cases: nodes don't exist, moving root, or moving into itself/child
         if (src == null || dest == null || src == root || isInside(dest, src)) return;
 
         int subtreeSize = src.descendants + 1;
 
         // 1. Remove from old parent and update old ancestors' descendant counts
         Node oldParent = src.parent;
-        oldParent.children.remove(src);
+        oldParent.children.remove(src.name);
+        
         Node curr = oldParent;
         while (curr != null) {
             curr.descendants -= subtreeSize;
@@ -81,29 +85,15 @@ class DirectoryTree {
         }
 
         // 2. Add to new parent and update new ancestors' descendant counts
-        dest.children.add(src);
+        dest.children.put(src.name, src);
         src.parent = dest;
+        
         curr = dest;
         while (curr != null) {
             curr.descendants += subtreeSize;
             curr = curr.parent;
         }
-
-        // 3. Recursively update the paths in the HashMap for the moved subtree
-        String newSrcPath = dest.path + "/" + src.name;
-        updatePaths(src, srcPath, newSrcPath);
-    }
-
-    void updatePaths(Node node, String oldPath, String newPath) {
-        map.remove(oldPath);
-        node.path = newPath;
-        map.put(newPath, node);
-
-        for (Node child : node.children) {
-            String oldChildPath = oldPath + "/" + child.name;
-            String newChildPath = newPath + "/" + child.name;
-            updatePaths(child, oldChildPath, newChildPath);
-        }
+        // Notice we NO LONGER need updatePaths() - massive performance boost!
     }
 
     void copyPaste(String srcPath, String destPath) {
@@ -112,9 +102,8 @@ class DirectoryTree {
 
         if (src == null || dest == null || isInside(dest, src)) return;
 
-        String newPath = dest.path + "/" + src.name;
-        Node copy = cloneTree(src, dest, newPath);
-        dest.children.add(copy);
+        Node copy = cloneTree(src, dest);
+        dest.children.put(copy.name, copy);
 
         int subtreeSize = copy.descendants + 1;
 
@@ -126,15 +115,14 @@ class DirectoryTree {
         }
     }
 
-    Node cloneTree(Node node, Node parent, String path) {
-        Node copy = new Node(node.name, path);
+    // O(K) where K is the size of the subtree being copied
+    Node cloneTree(Node node, Node parent) {
+        Node copy = new Node(node.name);
         copy.parent = parent;
-        map.put(path, copy);
 
-        for (Node child : node.children) {
-            String childPath = path + "/" + child.name;
-            Node childCopy = cloneTree(child, copy, childPath);
-            copy.children.add(childCopy);
+        for (Node child : node.children.values()) {
+            Node childCopy = cloneTree(child, copy);
+            copy.children.put(childCopy.name, childCopy);
             copy.descendants += childCopy.descendants + 1;
         }
         return copy;
@@ -142,15 +130,43 @@ class DirectoryTree {
 }
 
 public class DirectoryTreeSum {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        if (!sc.hasNextInt()) return;
+    // Fast I/O is MANDATORY for Juspay
+    static class FastReader {
+        BufferedReader br;
+        StringTokenizer st;
 
-        int n = sc.nextInt();
+        public FastReader() {
+            br = new BufferedReader(new InputStreamReader(System.in));
+        }
+
+        String next() {
+            while (st == null || !st.hasMoreElements()) {
+                try {
+                    String line = br.readLine();
+                    if (line == null) return null;
+                    st = new StringTokenizer(line);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            return st.nextToken();
+        }
+
+        int nextInt() {
+            return Integer.parseInt(next());
+        }
+    }
+
+    public static void main(String[] args) {
+        FastReader sc = new FastReader();
+        
+        String nStr = sc.next();
+        if (nStr == null) return;
+        int n = Integer.parseInt(nStr);
+        
         String rootName = sc.next();
         DirectoryTree tree = new DirectoryTree(rootName);
 
-        // Reading N-1 edges to construct the initial tree
         for (int i = 1; i < n; i++) {
             String parentPath = sc.next();
             String childName = sc.next();
@@ -173,6 +189,5 @@ public class DirectoryTreeSum {
                 tree.copyPaste(src, dest);
             }
         }
-        sc.close();
     }
 }
