@@ -117,15 +117,22 @@ class LockingTree {
         }
 
         // Create a copy to avoid ConcurrentModificationException during iteration
-        List<Node> lockedNodes = new ArrayList<>(curr.lockedDescendants);
-        
-        // Unlock all descendants (this automatically removes them from ancestors' sets)
-        for (Node descendant : lockedNodes) {
-            unlock(descendant.name, user);
+        List<Node> copy = new ArrayList<>(curr.lockedDescendants);
+        for(Node des : copy) {
+            unlock(des.name, des.lockedBy);
+            curr.lockedDescendants.remove(des);
         }
 
-        // Finally, lock the current node
-        return lock(name, user);
+        curr.isLocked = true;
+        curr.lockedBy = user;
+
+        Node parent = curr.parent;
+        while (parent != null) {
+            parent.lockedDescendants.add(curr);
+            parent = parent.parent;
+        }
+
+        return true;
     }
 
     private boolean hasLockedAncestor(Node curr) {
@@ -140,7 +147,7 @@ class LockingTree {
     }
 }
 
-class TreeOfLockingSpace {
+public class TreeOfLockingSpace {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt(), m = sc.nextInt();
@@ -158,15 +165,9 @@ class TreeOfLockingSpace {
             int val = sc.nextInt();
 
             switch (op) {
-                case 1 :
-                    System.out.println(lt.lock(str,val));
-                    break;
-                case 2 :
-                    System.out.println(lt.unlock(str, val));
-                    break;
-                case 3 :
-                    System.out.println(lt.upgrade(str, val));
-                    break;
+                case 1 -> System.out.println(lt.lock(str,val));
+                case 2 -> System.out.println(lt.unlock(str, val));
+                case 3 -> System.out.println(lt.upgrade(str, val));
             }
         }
         
