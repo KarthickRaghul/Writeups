@@ -88,36 +88,66 @@ class ConcurrentLockingTree {
         Node curr = map.get(name);
         if (curr == null) return false;
 
-        int currentState = curr.state.get();
-        if (currentState == -1 || curr.lockedDescendants.isEmpty()) {
-            return false; 
-        }
+        int currentState;
+        List<Node> toUnlock;
+        
+        // 1. Validate state and capture the exact descendants to unlock
+        while (true) {
+            currentState = curr.state.get();
+            if (currentState == -1 || curr.lockedDescendants.isEmpty()) return false; 
 
-        for (Node desc : curr.lockedDescendants) {
-            if (desc.lockedBy.get() == null || desc.lockedBy.get() != user) {
-                return false;
+            toUnlock = new ArrayList<>(curr.lockedDescendants);
+            boolean valid = true;
+            for (Node desc : toUnlock) {
+                if (desc.lockedBy.get() == null || desc.lockedBy.get() != user) {
+                    valid = false;
+                    break;
+                }
+            }
+            if (!valid) return false;
+
+            // 2. Lock current node. If this CAS fails, another thread altered the tree; retry.
+            if (curr.state.compareAndSet(currentState, -1)) {
+                break; 
             }
         }
 
-        if (!curr.state.compareAndSet(currentState, -1)) {
-            return false; 
-        }
-
-        List<Node> toUnlock = new ArrayList<>(curr.lockedDescendants);
+        // 3. Clean up the descendants LOCALLY (Do not traverse higher than curr)
         for (Node desc : toUnlock) {
-            unlock(desc.name, user);
+            desc.lockedBy.set(null);
+            desc.state.set(0); 
+            
+            Node temp = desc.parent;
+            while (temp != curr && temp != null) { // STOP at curr
+                int expected;
+                do {
+                    expected = temp.state.get();
+                } while (!temp.state.compareAndSet(expected, expected - 1));
+                
+                temp.lockedDescendants.remove(desc);
+                temp = temp.parent;
+            }
         }
 
+        curr.lockedDescendants.clear();
         curr.lockedBy.set(user);
         
+        // 4. Apply the exact NET CHANGE to ancestors ABOVE curr
+        int netChange = 1 - toUnlock.size();
         Node temp = curr.parent;
+        
         while (temp != null) {
             int expected;
             do {
                 expected = temp.state.get();
-            } while (!temp.state.compareAndSet(expected, expected + 1));
+            } while (!temp.state.compareAndSet(expected, expected + netChange));
             
+            // Update the ancestor's sets
+            for (Node desc : toUnlock) {
+                temp.lockedDescendants.remove(desc);
+            }
             temp.lockedDescendants.add(curr);
+            
             temp = temp.parent;
         }
 
@@ -139,7 +169,7 @@ class ConcurrentLockingTree {
     }
 }
 
-public class ConcurrentLockingTreeMultithreading {
+public class AtomicVariablesCompletely {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         
