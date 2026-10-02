@@ -4,12 +4,13 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 class Node {
+
     String name;
+    Node parent;
+
     boolean isLocked;
     int lockedBy;
-    Node parent;
     
-    // Thread-safe constructs
     AtomicInteger lockedDescendantCount;
     ReentrantReadWriteLock rwl;
     List<Node> children; 
@@ -34,16 +35,15 @@ class TreeOfLocking {
         for (int i = 0; i < n; i++) {
             nodes[i] = new Node(names[i]);
             map.put(names[i], nodes[i]);
-        }
         
-        for (int i = 1; i < n; i++) {
-            int p = (i - 1) / m;
-            nodes[i].parent = nodes[p];
-            nodes[p].children.add(nodes[i]);
+            if(i != 0) {
+                int p = (i - 1) / m;
+                nodes[i].parent = nodes[p];
+                nodes[p].children.add(nodes[i]);
+            }
         }
     }
 
-    // Helper to get the path from Root to the target node
     private List<Node> getPath(Node node) {
         List<Node> path = new ArrayList<>();
         Node temp = node;

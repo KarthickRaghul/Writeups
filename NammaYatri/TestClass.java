@@ -130,7 +130,7 @@ class FastReader {
     }
 }
 
-class TestClass {
+public class TestClass {
     public static void main(String args[]) throws Exception {
         FastReader sc = new FastReader();
         int n = sc.nextInt();
