@@ -33,6 +33,7 @@ class TreeOfLocking {
 
     boolean lock (String name, int user) {
         Node curr = map.get(name);
+        // System.out.println("lock " + curr.name);
         if(curr == null || curr.isLocked || !curr.lockedDescendants.isEmpty() || hasLockedAncestors(curr))
             return false;
             
